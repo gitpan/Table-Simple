@@ -30,9 +30,7 @@ in this subclass:
 
 =over 4
 
-=item
-
-column_marker
+=item column_marker
 
 The default is "|"
 
@@ -46,9 +44,7 @@ has '+column_marker' => (
 
 =over 4
 
-=item
-
-horizontal_rule
+=item horizontal_rule
 
 The default is "-"
 
@@ -62,9 +58,7 @@ has '+horizontal_rule' => (
 
 =over 4
 
-=item
-
-padding
+=item padding
 
 The default is 2.
 
@@ -78,8 +72,13 @@ has '+padding' => (
 
 =head1 LICENSE
 
-This is free software. You may modify and/or redistribute it under the same
-terms as Perl itself.
+Copyright (C) 2010 Mark Allen
+
+This program is free software; you can redistribute it and/or modify it
+under the terms of either: the GNU General Public License as published
+by the Free Software Foundation; or the Artistic License.
+
+See http://dev.perl.org/licenses/ for more information.
 
 =head1 AUTHOR
 

@@ -10,7 +10,7 @@ use overload;
 
 use Table::Simple::Column;
 
-our $VERSION = 0.01;
+our $VERSION = 0.02;
 
 =head1 NAME
 
@@ -64,9 +64,7 @@ any rows.
 
 =over 4
 
-=item 
-
-type
+=item type
 
 This attribute stores the type of a passed object, so you can't combine
 objects of type "Foo" with type "Bar."
@@ -85,9 +83,7 @@ has 'type' => (
 
 =over 4
 
-=item 
-
-row_count
+=item row_count
 
 This attribute stores the number of rows that have been processed by the 
 table so far.  It's a read-only attribute.
@@ -108,9 +104,7 @@ has 'row_count' => (
 
 =over 4
 
-=item 
-
-columns
+=item columns
 
 This attribute is a collection of L<Table::Simple::Column> objects which 
 represent the attribute names of the perl objects being processed.
@@ -138,9 +132,7 @@ has 'columns' => (
 
 =over 4
 
-=item
-
-name
+=item name
 
 You can optionally supply a name to the table which will be the title of a
 table in the output phase.
@@ -158,42 +150,30 @@ has 'name' => (
 
 =over 4
 
-=item
-
-get_columns
+=item get_columns
 
 This method gets all columns, preserving the order in which they were
 added to the collection.
 
-=item
-
-reorder_columns
+=item reorder_columns
 
 This method changes the order of columns. B<NOTE:> Any columns which are omitted will be deleted!
 
-=item 
-
-delete_column
+=item delete_column
 
 Delete the given column from the collection.
 
-=item
-
-has_columns
+=item has_columns
 
 This method returns true if the collection has any columns. (See has_column to test whether a specific column exists.)
 
-=item
-
-get_column_names
+=item get_column_names
 
 This method returns the names of all columns, preserving the order in which
 they were added to the collection.
 
 
-=item
-
-has_column
+=item has_column
 
 This method returns true if the columns attribute contains the column name
 given.
@@ -212,9 +192,7 @@ sub has_column {
 
 =over 4
 
-=item
-
-get_column
+=item get_column
 
 This method gets the L<Table::Simple::Column> object with the given name.
 
@@ -237,9 +215,7 @@ sub get_column {
 
 =over 4
 
-=item
-
-add_column
+=item add_column
 
 This method adds a L<Table::Simple::Column> object to the columns collection.
 You normally shouldn't need to do this.
@@ -268,9 +244,7 @@ sub _columns_builder {
 
 =over 4
 
-=item
-
-extract_columns
+=item extract_columns
 
 Given a perl object, this method extracts the non-private attribute names
 (that is, those which do not start with an underscore) and creates 
@@ -325,9 +299,7 @@ sub extract_columns {
 
 =over 4
 
-=item 
-
-set_type
+=item set_type
 
 This method sets the type attribute based on the perl object's package name.
 
@@ -386,9 +358,7 @@ sub _extract_columns_hashref {
 
 =over 4
 
-=item
-
-extract_row
+=item extract_row
 
 This method extract row values from attribute names in a given perl object.
 
@@ -479,8 +449,13 @@ sub _get_value_using_introspection {
 
 =head1 LICENSE
 
-This is free software. You may modify and/or redistribute it under the same
-terms as Perl itself.
+Copyright (C) 2010 Mark Allen
+
+This program is free software; you can redistribute it and/or modify it
+under the terms of either: the GNU General Public License as published
+by the Free Software Foundation; or the Artistic License.
+
+See http://dev.perl.org/licenses/ for more information.
 
 =head1 AUTHOR
 

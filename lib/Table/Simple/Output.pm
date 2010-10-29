@@ -19,9 +19,7 @@ The output functionality was split to make subclassing easier.
 
 =over 4
 
-=item
-
-column_marker
+=item column_marker
 
 This attribute is the character to mark the beginning or end of a column. The
 default is ":"
@@ -38,9 +36,7 @@ has 'column_marker' => (
 
 =over 4
 
-=item
-
-horizontal_rule
+=item horizontal_rule
 
 This attribute is the character to mark horizontal lines in the table. The
 default is "="
@@ -57,9 +53,7 @@ has 'horizontal_rule' => (
 
 =over 4
 
-=item
-
-intersection_marker
+=item intersection_marker
 
 This attribute is the character marking the intersection between the column
 marker and a horizontal rule. The default is "+"
@@ -76,9 +70,7 @@ has 'intersection_marker' => (
 
 =over 4
 
-=item
-
-padding
+=item padding
 
 This attribute defines the amount of spaces to put around data rows. The
 default is 1 space.
@@ -95,9 +87,7 @@ has 'padding' => (
 
 =over 4
 
-=item
-
-table
+=item table
 
 This attribute is required at construction time. It is the table to be 
 output. It must be an object of type L<Table::Simple>.
@@ -191,9 +181,7 @@ sub _build__blank_row {
 
 =over 4
 
-=item
-
-center($text, $width)
+=item center($text, $width)
 
 This method takes a text string and a width and centers the text in the
 width given. It returns the text string padded with spaces to put the
@@ -217,9 +205,7 @@ sub center {
 
 =over 4
 
-=item
-
-left_justify($text, $width)
+=item left_justify($text, $width)
 
 This puts text against the left margin of a table cell, padded with
 spaces until it is the specified width.
@@ -238,9 +224,7 @@ sub left_justify {
 
 =over 4
 
-=item
-
-right_justify($text, $width)
+=item right_justify($text, $width)
 
 This method puts text against the right margin of a table cell, padded
 with spaces until it is the specified width.
@@ -259,9 +243,7 @@ sub right_justify {
 
 =over 4
 
-=item 
-
-build_row_output( @array )
+=item build_row_output( @array )
 
 This method returns a scalar string composed of the rows specified in
 the input @array.
@@ -297,9 +279,7 @@ sub build_row_output {
 
 =over 4
 
-=item
-
-build_column_name_output
+=item build_column_name_output
 
 This method returns a string scalar composed of column names centered in
 the width for each column.
@@ -328,9 +308,7 @@ sub build_column_name_output {
 
 =over 4
 
-=item
-
-build_table_name_output
+=item build_table_name_output
 
 This outputs the L<Table::Simple> name attribute centered in its own row. It
 returns a string scalar.
@@ -358,9 +336,7 @@ sub build_table_name_output {
 
 =over 4
 
-=item
-
-build_table_output
+=item build_table_output
 
 This method returns a string scalar composed of the table name row (if
 defined), column names, and all row values.
@@ -383,9 +359,7 @@ sub build_table_output {
 
 =over 4
 
-=item
-
-print_table
+=item print_table
 
 This method outputs the string scalar from the build_table_output() method
 to standard out.
@@ -402,8 +376,13 @@ sub print_table {
 
 =head1 LICENSE
 
-This is free software. You may modify and/or redistribute it under the same
-terms as Perl itself.
+Copyright (C) 2010 Mark Allen
+
+This program is free software; you can redistribute it and/or modify it
+under the terms of either: the GNU General Public License as published
+by the Free Software Foundation; or the Artistic License.
+
+See http://dev.perl.org/licenses/ for more information.
 
 =head1 AUTHOR
 

@@ -10,7 +10,7 @@ build_requires:
   namespace::autoclean: 0
 configure_requires:
   Module::Build: 0.36
-generated_by: 'Module::Build version 0.3603'
+generated_by: 'Module::Build version 0.3607'
 license: perl
 meta-spec:
   url: http://module-build.sourceforge.net/META-spec-v1.4.html
@@ -19,7 +19,7 @@ name: Table-Simple
 provides:
   Table::Simple:
     file: lib/Table/Simple.pm
-    version: 0.01
+    version: 0.02
   Table::Simple::Column:
     file: lib/Table/Simple/Column.pm
   Table::Simple::Output:
@@ -28,4 +28,4 @@ provides:
     file: lib/Table/Simple/Output/Theory.pm
 resources:
   license: http://dev.perl.org/licenses/
-version: 0.01
+version: 0.02
